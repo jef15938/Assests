@@ -1416,26 +1416,26 @@ html.isprint .just-navbar-fundbasic .navbar-right {
 }
 
 /* B_201基金快搜 select、search */
-.form-control {
+form[id="selectFrom"] .form-control {
   font-weight: 700;
   color: #333;
 }
 
-form .form-group:nth-last-child(-n+2) {
+form[id="selectFrom"] .form-group:nth-last-child(-n+2) {
   margin-bottom: 40px;
 }
 
-form .form-group {
+form[id="selectFrom"] .form-group {
   margin-bottom: 16px;
   padding: 0px 16px 0 16px;
 }
 
 @media (max-width: 767px) {
-  form .form-group:nth-last-child(-n+2) {
+  form[id="selectFrom"] .form-group:nth-last-child(-n+2) {
     margin-bottom: 32px;
   }
 
-  form .form-group {
+  form[id="selectFrom"] .form-group {
     padding: 0px 8px 0 8px;
   }
 
@@ -1445,24 +1445,24 @@ form .form-group {
 }
 
 @media (max-width: 767px) {
-  form .form-group {
+  form[id="selectFrom"] .form-group {
     padding: 0px 8px 0 8px;
   }
 }
 
-select.form-control {
+form[id="selectFrom"] select.form-control {
   height: 46px;
   padding: 12px;
 }
 
 @media (max-width: 319px) {
-  select.form-control {
+  form[id="selectFrom"] select.form-control {
     height: 42px;
     padding: 10px;
   }
 }
 
-.input-group input[type="text"]{
+form[id="selectFrom"] .input-group input[type="text"]{
   height: 46px;
   padding: 12px 0px 12px 12px;
   border-right-color: transparent;
@@ -1472,14 +1472,14 @@ select.form-control {
 }
 
 @media (max-width: 319px) {
-  .input-group input[type="text"]{
+  form[id="selectFrom"] .input-group input[type="text"]{
     height: 42px;
     padding: 10px;
   }
 }
 
 /* 放大鏡 */
-.input-group-btn button {
+form[id="selectFrom"] .input-group-btn button {
   font-size: 18px;
   background: transparent;
   color: #00726A;
@@ -1488,30 +1488,30 @@ select.form-control {
   transition: all .5s ease-in-out;
 }
 
-.input-group-btn button:active,
-.input-group-btn button:hover, 
-.input-group-btn button:focus {
+form[id="selectFrom"] .input-group-btn button:active,
+form[id="selectFrom"] .input-group-btn button:hover, 
+form[id="selectFrom"] .input-group-btn button:focus {
   background: #00726A;
   border-color: #00726A;
 }
 
 @media (max-width: 319px) {
-  .input-group-btn .btn {
+  form[id="selectFrom"] .input-group-btn .btn {
     height: 42px;
   }
 }
 
-::-webkit-input-placeholder { /* Edge */
+form[id="selectFrom"] ::-webkit-input-placeholder { /* Edge */
   font-weight: 700;
   color: #333;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+form[id="selectFrom"] :-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-weight: 700;
   color: #333;
 }
 
-::placeholder {
+form[id="selectFrom"] ::placeholder {
   font-weight: 700;
   color: #333;
 }
@@ -1672,7 +1672,9 @@ div.dataTables_wrapper div.dataTables_filter input {
   color: #666;
   width: 116px;
   height: 38px;
-  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   transition: all .5s ease-in-out
 }
