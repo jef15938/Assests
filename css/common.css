@@ -1814,10 +1814,116 @@ dd {
   opacity: .8;
 }
 
-
 #SysJustIFRAMEDIV form[name="sch"] > .form-group label.control-label {
   color: #666666;
   margin-right: 8px;
 }
 
 
+/* B203 基金快搜 table */
+/* tabe#dataTbl 資金快搜 */
+/* tabe#oMainTable2 資金停泊帳戶 */
+table thead tr th,
+table#dataTbl thead tr th,
+table#oMainTable2 thead tr th {
+  background-color: #ffeeb3;
+  color: #666;
+  border-width: 1px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+table#dataTbl thead tr th {
+  border-width: 1px 1px 0px 0px;
+}
+
+table#oMainTable2 {
+  margin: auto;
+}
+
+table#oMainTable2 tbody tr td {
+  padding: 11px 12px;
+}
+
+table.dataTable,
+table#oMainTable2 {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+@media (max-width: 767px) {
+  table.dataTable,
+  table#oMainTable2 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+table tbody tr:nth-child(odd) td,
+table#dataTbl tbody tr:nth-child(odd) td,
+table#oMainTable2 tbody tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+table tbody tr:nth-child(odd) td.sorting_1,
+table#dataTbl tbody tr:nth-child(odd) td.sorting_1,
+table#oMainTable2 tbody tr:nth-child(odd) td.sorting_1 {
+  background-color: #e4f5ef;
+}
+
+table tbody tr:nth-child(even) td,
+table#dataTbl tbody tr:nth-child(even) td,
+table#oMainTable2 tbody tr:nth-child(even) td {
+  background-color: #f8f8f8;
+}
+
+table tbody tr:nth-child(even) td.sorting_1,
+table#dataTbl tbody tr:nth-child(even) td.sorting_1,
+table#oMainTable2 tbody tr:nth-child(even) td.sorting_1 {
+  background-color: #DBEBE6;
+}
+
+table tbody tr td a,
+table tbody tr td a:link {
+  color: #00726a;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+table tbody tr td a:hover {
+  color: #00918a;
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control {
+  padding: 28px;
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control:before, 
+table.dataTable.dtr-column>tbody>tr>th.control:before {
+  background: #EEEEEE;
+  border: 1px solid #DDDDDD;
+  color: #00726A;
+  font-weight: bolder;
+  box-shadow: none;
+}
+
+table.dataTable.dtr-column>tbody>tr.parent td.control:before, 
+table.dataTable.dtr-column>tbody>tr.parent th.control:before {
+  background: #EEEEEE;
+}
+
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+  color: #00726A;
+}
+
+/* B206 主要債市收盤行情 table */
+table.dataTable tbody td.group {
+  background-color: #DBEBE6;
+}
+
+table#dataTbl.dataTable tbody tr.child td.child table {
+  background-color: #DBEBE6;
+  margin: 0px;
+}
