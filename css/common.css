@@ -1939,6 +1939,8 @@ table#oMainTable2 tbody tr:nth-child(even) td.sorting_1 {
   background-color: #DBEBE6;
 }
 
+table[id^="DataTables_Table_"] thead th span.exchange a,
+table[id^="DataTables_Table_"] thead th span.exchange a:link
 table tbody tr td a,
 table tbody tr td a:link {
   color: #00726a;
@@ -1947,6 +1949,7 @@ table tbody tr td a:link {
   transition: all .5s ease-in-out;
 }
 
+table[id^="DataTables_Table_"] thead th span.exchange a:hover,
 table tbody tr td a:hover {
   color: #00918a;
 }
