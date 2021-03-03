@@ -1516,6 +1516,22 @@ form[id="selectFrom"] ::placeholder {
   color: #333;
 }
 
+/* pagination */ 
+#dataTbl_paginate .pagination > li > a,
+#dataTbl_paginate .pagination > li > a:focus {
+  color: #666;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+#dataTbl_paginate .pagination > .active > a,
+#dataTbl_paginate .pagination > .active > a:focus {
+  font-weight: bolder;
+  color: #00726a;
+  border-color: transparent;
+  background-color: transparent;
+}
+
 
 /* B_202基金快搜 tab、button */
 /* tab */
@@ -1789,6 +1805,13 @@ dd {
   padding: 11px 10px;
   font-size: 16px;
   width: 106px;
+  transition: all .5s ease-in-out
+}
+
+#SysJustIFRAMEDIV input[type="button"][value="GO"]:active,
+#SysJustIFRAMEDIV input[type="button"][value="GO"]:hover, 
+#SysJustIFRAMEDIV input[type="button"][value="GO"]:focus {
+  opacity: .8;
 }
 
 
