@@ -1417,8 +1417,8 @@ html.isprint .just-navbar-fundbasic .navbar-right {
 
 /* B_201基金快搜 select、search */
 form[id="selectFrom"] .form-control {
-  font-weight: 700;
   color: #333;
+  font-weight: bold;
 }
 
 form[id="selectFrom"] .form-group:nth-last-child(-n+2) {
@@ -1467,8 +1467,8 @@ form[id="selectFrom"] .input-group input[type="text"]{
   padding: 12px 0px 12px 12px;
   border-right-color: transparent;
   z-index: 3;
-  font-weight: 700;
   color: #333;
+  font-weight: bold;
 }
 
 @media (max-width: 319px) {
@@ -1502,18 +1502,18 @@ form[id="selectFrom"] .input-group-btn button:focus {
 }
 
 form[id="selectFrom"] ::-webkit-input-placeholder { /* Edge */
-  font-weight: 700;
   color: #333;
+  font-weight: bold;
 }
 
 form[id="selectFrom"] :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-weight: 700;
   color: #333;
+  font-weight: bold;
 }
 
 form[id="selectFrom"] ::placeholder {
-  font-weight: 700;
   color: #333;
+  font-weight: bold;
 }
 
 /* pagination */ 
@@ -1880,7 +1880,7 @@ table#oMainTable2 thead tr th,
 table[id^="DataTables_Table_"] thead tr th {
   background-color: #ffeeb3;
   color: #666;
-  font-size: 15px;
+  font-size: 16px;
   border-width: 1px;
   padding-top: 13px;
   padding-bottom: 13px;
