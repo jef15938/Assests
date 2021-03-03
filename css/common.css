@@ -1783,7 +1783,15 @@ dd {
 
 /* B208 基金休市公告 search */
 #SysJustIFRAMEDIV form[name="sch"] {
-  margin-top: 24px !important;
+  margin-top: 32px !important;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  #SysJustIFRAMEDIV form[name="sch"] {
+    margin-top: 24px !important;
+    margin-bottom: 24px;
+  }
 }
 
 #SysJustIFRAMEDIV form[name="sch"] > .form-group input[type="text"] {
