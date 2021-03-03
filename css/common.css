@@ -1798,9 +1798,11 @@ dd {
   }
 }
 
+/* 按鈕 */
 #SysJustIFRAMEDIV input[type="button"][value="GO"] {
   background: linear-gradient(135deg, #008680 0%, #00726A 100%);
   box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
+  border: 1.5px solid #00726a;
   border-radius: 6px;
   padding: 11px 10px;
   font-size: 16px;
@@ -1809,9 +1811,49 @@ dd {
 }
 
 #SysJustIFRAMEDIV input[type="button"][value="GO"]:active,
-#SysJustIFRAMEDIV input[type="button"][value="GO"]:hover, 
+#SysJustIFRAMEDIV input[type="button"][value="GO"]:hover,
 #SysJustIFRAMEDIV input[type="button"][value="GO"]:focus {
   opacity: .8;
+}
+
+/* 上一週 / 本週 / 下一週 按鈕 */
+#SysJustIFRAMEDIV input[type="button"][name="PreWeek"],
+#SysJustIFRAMEDIV input[type="button"][name="ThisWeek"],
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"] {
+  background: #fff;
+  color: #00726A;
+  border: 1.5px solid #00726a;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 14px;
+  width: 106px;
+  margin: 16px 0px;
+  transition: all .5s ease-in-out;
+}
+
+@media (max-width: 400px) {
+  #SysJustIFRAMEDIV input[type="button"][name="PreWeek"],
+  #SysJustIFRAMEDIV input[type="button"][name="ThisWeek"],
+  #SysJustIFRAMEDIV input[type="button"][name="NexteWeek"] {
+    width: 25%;
+  }
+}
+
+#SysJustIFRAMEDIV input[type="button"][name="PreWeek"]:active,
+#SysJustIFRAMEDIV input[type="button"][name="PreWeek"]:hover, 
+#SysJustIFRAMEDIV input[type="button"][name="PreWeek"]:focus,
+#SysJustIFRAMEDIV input[type="button"][name="ThisWeek"]:active,
+#SysJustIFRAMEDIV input[type="button"][name="ThisWeek"]:hover, 
+#SysJustIFRAMEDIV input[type="button"][name="ThisWeek"]:focus,
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:active,
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:hover, 
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:focus {
+  color: #fff;
+  border: 1.5px solid #00726a;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 10%);
+  background-color: #00726a;
+  background-image: linear-gradient(105deg,#008680,#00726a);
 }
 
 #SysJustIFRAMEDIV form[name="sch"] > .form-group label.control-label {
@@ -1823,9 +1865,19 @@ dd {
 /* B203 基金快搜 table */
 /* tabe#dataTbl 資金快搜 */
 /* tabe#oMainTable2 資金停泊帳戶 */
+/* DataTables_Table_n ETF 全球匯市、iQuote全球指數、主要債市收盤行情 */
+
+table#dataTbl,
+/* table#oMainTable2, */
+table[id^="DataTables_Table_"] {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
 table thead tr th,
 table#dataTbl thead tr th,
-table#oMainTable2 thead tr th {
+table#oMainTable2 thead tr th,
+table[id^="DataTables_Table_"] thead tr th {
   background-color: #ffeeb3;
   color: #666;
   border-width: 1px;
@@ -1833,7 +1885,8 @@ table#oMainTable2 thead tr th {
   padding-bottom: 13px;
 }
 
-table#dataTbl thead tr th {
+table#dataTbl thead tr th,
+table[id^="DataTables_Table_"] thead tr th {
   border-width: 1px 1px 0px 0px;
 }
 
@@ -1841,8 +1894,9 @@ table#oMainTable2 {
   margin: auto;
 }
 
-table#oMainTable2 tbody tr td {
-  padding: 11px 12px;
+table#oMainTable2 tbody tr td,
+table[id^="DataTables_Table_"] tbody tr td {
+  padding: 12px 11px;
 }
 
 table.dataTable,
@@ -1895,7 +1949,8 @@ table tbody tr td a:hover {
   color: #00918a;
 }
 
-table.dataTable.dtr-column>tbody>tr>td.control {
+table.dataTable.dtr-column>tbody>tr>td.control,
+table[id^="DataTables_Table_"] tbody tr td.control {
   padding: 28px;
 }
 
@@ -1923,7 +1978,8 @@ table.dataTable tbody td.group {
   background-color: #DBEBE6;
 }
 
-table#dataTbl.dataTable tbody tr.child td.child table {
+table#dataTbl.dataTable tbody tr.child td.child table,
+table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
   background-color: #DBEBE6;
   margin: 0px;
 }
