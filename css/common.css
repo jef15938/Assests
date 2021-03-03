@@ -1734,7 +1734,7 @@ div#SysJustIFRAMEDIV {
 
 table.just-tb-h thead tr th, table.just-tb-h-2 thead tr th, table.just-tb-h-fc thead tr th {
   background-color: #ffeeb3;
-  color: #333333;
+  color: #666;
   font-size: 15px;
 }
 
@@ -1880,6 +1880,7 @@ table#oMainTable2 thead tr th,
 table[id^="DataTables_Table_"] thead tr th {
   background-color: #ffeeb3;
   color: #666;
+  font-size: 15px;
   border-width: 1px;
   padding-top: 13px;
   padding-bottom: 13px;
