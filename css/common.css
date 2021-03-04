@@ -1864,6 +1864,7 @@ a:focus {
   color: #333;
   border: unset;
   font-weight: bold;
+  text-decoration: none;
   transition: all .5s ease-in-out;
 }
 
@@ -1883,6 +1884,7 @@ ul.tag {
 ul.tag .btn-group a {
   padding: 9px;
   width: 106px;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
@@ -2013,6 +2015,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   align-items: center;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
   transition: all .5s ease-in-out
 }
 
@@ -2239,7 +2242,8 @@ table[id^="DataTables_Table_"] {
 table>thead>tr>th,
 table#dataTbl>thead>tr>th,
 table#oMainTable2 thead tr>th,
-table[id^="DataTables_Table_"]>thead>tr>th {
+table[id^="DataTables_Table_"]>thead>tr>th,
+table.Tb01BN>tbody>tr:first-child>td {
   background-color: #ffeeb3;
   color: #666;
   font-size: 16px;
