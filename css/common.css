@@ -2304,8 +2304,8 @@ table[id^="DataTables_Table_"]>tbody>tr:nth-child(even)>td.sorting_1 {
   background-color: #DBEBE6;
 }
 
-table[id^="DataTables_Table_"]>thead>th span.exchange a,
-table[id^="DataTables_Table_"]>thead>th span.exchange a:link,
+table[id^="DataTables_Table_"]>thead th span.exchange a,
+table[id^="DataTables_Table_"]>thead th span.exchange a:link,
 table>tbody>tr>td a,
 table>tbody>tr>td a:link {
   color: #00726a;
