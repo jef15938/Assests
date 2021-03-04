@@ -2442,7 +2442,7 @@ table.just-tb-h-fc td.child-Title,
 table[id^="DataTables_Table_"].just-tb-h td.child-Title, 
 table[id^="DataTables_Table_"].just-tb-h-2 td.child-Title, 
 table[id^="DataTables_Table_"].just-tb-h-fc td.child-Title {
-  background-color: #DBEBE6;
+  background-color: #ffeeb3;
   color: #333333;
 }
 
