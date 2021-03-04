@@ -2232,10 +2232,10 @@ table[id^="DataTables_Table_"] {
   overflow: hidden;
 }
 
-table thead tr th,
-table#dataTbl thead tr th,
-table#oMainTable2 thead tr th,
-table[id^="DataTables_Table_"] thead tr th {
+table>thead>tr>th,
+table#dataTbl>thead>tr>th,
+table#oMainTable2 thead tr>th,
+table[id^="DataTables_Table_"]>thead>tr>th {
   background-color: #ffeeb3;
   color: #666;
   font-size: 16px;
@@ -2244,8 +2244,8 @@ table[id^="DataTables_Table_"] thead tr th {
   padding-bottom: 13px;
 }
 
-table#dataTbl thead tr th,
-table[id^="DataTables_Table_"] thead tr th {
+table#dataTbl>thead>tr>th,
+table[id^="DataTables_Table_"]>thead>tr>th {
   border-width: 1px 1px 0px 0px;
 }
 
@@ -2253,8 +2253,8 @@ table#oMainTable2 {
   margin: auto;
 }
 
-table#oMainTable2 tbody tr td,
-table[id^="DataTables_Table_"] tbody tr td {
+table#oMainTable2>tbody>tr>td,
+table[id^="DataTables_Table_"]>tbody>tr>td {
   padding: 12px 11px;
 }
 
@@ -2272,51 +2272,51 @@ table#oMainTable2 {
   }
 }
 
-table tbody tr:nth-child(odd) td,
-table#dataTbl tbody tr:nth-child(odd) td,
-table#oMainTable2 tbody tr:nth-child(odd) td,
-table[id^="DataTables_Table_"] tbody tr:nth-child(odd) td {
+table>tbody>tr:nth-child(odd)>td,
+table#dataTbl>tbody>tr:nth-child(odd)>td,
+table#oMainTable2>tbody>tr:nth-child(odd)>td,
+table[id^="DataTables_Table_"]>tbody>tr:nth-child(odd)>td {
   background-color: #fff;
 }
 
-table tbody tr:nth-child(odd) td.sorting_1,
-table#dataTbl tbody tr:nth-child(odd) td.sorting_1,
-table#oMainTable2 tbody tr:nth-child(odd) td.sorting_1,
-table[id^="DataTables_Table_"] tbody tr:nth-child(odd) td.sorting_1 {
+table>tbody>tr:nth-child(odd)>td.sorting_1,
+table#dataTbl>tbody>tr:nth-child(odd)>td.sorting_1,
+table#oMainTable2>tbody>tr:nth-child(odd)>td.sorting_1,
+table[id^="DataTables_Table_"]>tbody>tr:nth-child(odd)>td.sorting_1 {
   background-color: #e4f5ef;
 }
 
-table tbody tr:nth-child(even) td,
-table#dataTbl tbody tr:nth-child(even) td,
-table#oMainTable2 tbody tr:nth-child(even) td,
-table[id^="DataTables_Table_"] tbody tr:nth-child(even) td {
+table>tbody>tr:nth-child(even)>td,
+table#dataTbl tbody tr:nth-child(even)>td,
+table#oMainTable2 tbody tr:nth-child(even)>td,
+table[id^="DataTables_Table_"] tbody tr:nth-child(even)>td {
   background-color: #f8f8f8;
 }
 
-table tbody tr:nth-child(even) td.sorting_1,
-table#dataTbl tbody tr:nth-child(even) td.sorting_1,
-table#oMainTable2 tbody tr:nth-child(even) td.sorting_1,
-table[id^="DataTables_Table_"] tbody tr:nth-child(even) td.sorting_1 {
+table>tbody>tr:nth-child(even)>td.sorting_1,
+table#dataTbl>tbody>tr:nth-child(even)>td.sorting_1,
+table#oMainTable2>tbody>tr:nth-child(even)>td.sorting_1,
+table[id^="DataTables_Table_"]>tbody>tr:nth-child(even)>td.sorting_1 {
   background-color: #DBEBE6;
 }
 
-table[id^="DataTables_Table_"] thead th span.exchange a,
-table[id^="DataTables_Table_"] thead th span.exchange a:link,
-table tbody tr td a,
-table tbody tr td a:link {
+table[id^="DataTables_Table_"]>thead>th span.exchange a,
+table[id^="DataTables_Table_"]>thead>th span.exchange a:link,
+table>tbody>tr>td a,
+table>tbody>tr>td a:link {
   color: #00726a;
   text-decoration: underline;
   cursor: pointer;
   transition: all .5s ease-in-out;
 }
 
-table[id^="DataTables_Table_"] thead th span.exchange a:hover,
-table tbody tr td a:hover {
+table[id^="DataTables_Table_"]>thead th span.exchange a:hover,
+table>tbody>tr>td a:hover {
   color: #00918a;
 }
 
 table.dataTable.dtr-column>tbody>tr>td.control,
-table[id^="DataTables_Table_"] tbody tr td.control {
+table[id^="DataTables_Table_"]>tbody>tr>td.control {
   padding: 28px;
 }
 
@@ -2334,20 +2334,24 @@ table.dataTable.dtr-column>tbody>tr.parent th.control:before {
   background: #EEEEEE;
 }
 
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_desc:after {
+table.dataTable>thead .sorting_asc:after,
+table.dataTable>thead .sorting_desc:after {
   color: #00726A;
 }
 
 /* B206 主要債市收盤行情 table */
-table.dataTable tbody td.group {
+table.dataTable>tbody>td.group {
   background-color: #DBEBE6;
 }
 
-table#dataTbl.dataTable tbody tr.child td.child table,
-table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
-  background-color: #DBEBE6;
+table#dataTbl.dataTable>tbody>tr.child>td.child>table,
+table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child>table {
   margin: 0px;
+}
+
+table#dataTbl.dataTable>tbody>tr.child>td.child,
+table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child {
+  background: #DBEBE6;
 }
 
 
@@ -2367,6 +2371,7 @@ table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
   font-weight: bold;
   font-size: 16px;
   line-height: 26px;
+  padding-left: 15px;
 }
 
 @media (max-width: 767px) {
@@ -2418,7 +2423,10 @@ table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
 /* B210 Table 展開底色 */
 table.just-tb-h td.child-Title, 
 table.just-tb-h-2 td.child-Title, 
-table.just-tb-h-fc td.child-Title {
+table.just-tb-h-fc td.child-Title,
+table[id^="DataTables_Table_"].just-tb-h td.child-Title, 
+table[id^="DataTables_Table_"].just-tb-h-2 td.child-Title, 
+table[id^="DataTables_Table_"].just-tb-h-fc td.child-Title {
   background-color: #DBEBE6;
   color: #333333;
 }
@@ -2427,17 +2435,31 @@ table.just-tb-h-fc td.child-Title {
 /* checked */
 .radio-info input[type=radio]:checked+label::before {
   border-color: #00726A;
-  border-width: 6px;
+  border-width: 2px;
 }
 
 .radio-info input[type=radio]:checked+label::after {
-  background-color: transparent;
+  background-color: #00726A;
+  width: 7px;
+  height: 7px;
+  left: 5px;
+  top: 5px;
 }
 
 /* not checked */
 .radio label::before {
-  border: 2px solid #00726A;
+  border: 2px solid #999999;
 }
+
+/* hover、focus (綁 input 及 container div)*/
+.radio-info input[type="radio"]:hover+label::before,
+.radio-info input[type="radio"]:focus+label::before,
+.radio-info:hover input[type="radio"]+label::before,
+.radio-info:focus input[type="radio"]+label::before {
+  border-color: #00726A;
+  outline: none;
+}
+
 
 .radio.radio-inline {
   margin-top: 8px;
