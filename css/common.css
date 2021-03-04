@@ -1846,7 +1846,9 @@ form[id="selectFrom"] ::placeholder {
 
 /* B_202基金快搜 tab、button */
 /* tab */
-.nav-tabs>li.active>a {
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
   border:none;
   border-bottom: 2px solid #00726a;
   color: #00726a;
