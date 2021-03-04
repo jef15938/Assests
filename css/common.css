@@ -1808,7 +1808,8 @@ dd {
 }
 
 /* 按鈕 */
-#SysJustIFRAMEDIV input[type="button"][value="GO"] {
+#SysJustIFRAMEDIV input[type="button"][value="GO"],
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"] {
   background: linear-gradient(135deg, #008680 0%, #00726A 100%);
   box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
   border: 1.5px solid #00726a;
@@ -1821,14 +1822,18 @@ dd {
 
 #SysJustIFRAMEDIV input[type="button"][value="GO"]:active,
 #SysJustIFRAMEDIV input[type="button"][value="GO"]:hover,
-#SysJustIFRAMEDIV input[type="button"][value="GO"]:focus {
+#SysJustIFRAMEDIV input[type="button"][value="GO"]:focus,
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"]:active,
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"]:hover,
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"]:focus {
   opacity: .8;
 }
 
 /* 上一週 / 本週 / 下一週 按鈕 */
 #SysJustIFRAMEDIV input[type="button"][name="PreWeek"],
 #SysJustIFRAMEDIV input[type="button"][name="ThisWeek"],
-#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"] {
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"],
+#SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"] {
   background: #fff;
   color: #00726A;
   border: 1.5px solid #00726a;
@@ -1857,7 +1862,10 @@ dd {
 #SysJustIFRAMEDIV input[type="button"][name="ThisWeek"]:focus,
 #SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:active,
 #SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:hover, 
-#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:focus {
+#SysJustIFRAMEDIV input[type="button"][name="NexteWeek"]:focus,
+#SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"]:active,
+#SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"]:hover,
+#SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"]:focus {
   color: #fff;
   border: 1.5px solid #00726a;
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 10%);
@@ -1925,25 +1933,29 @@ table#oMainTable2 {
 
 table tbody tr:nth-child(odd) td,
 table#dataTbl tbody tr:nth-child(odd) td,
-table#oMainTable2 tbody tr:nth-child(odd) td {
+table#oMainTable2 tbody tr:nth-child(odd) td,
+table[id^="DataTables_Table_"] tbody tr:nth-child(odd) td {
   background-color: #fff;
 }
 
 table tbody tr:nth-child(odd) td.sorting_1,
 table#dataTbl tbody tr:nth-child(odd) td.sorting_1,
-table#oMainTable2 tbody tr:nth-child(odd) td.sorting_1 {
-  background-color: #e4f5ef;
+table#oMainTable2 tbody tr:nth-child(odd) td.sorting_1,
+table[id^="DataTables_Table_"] tbody tr:nth-child(odd) td.sorting_1 {
+  background-color: #e4f5ef ;
 }
 
 table tbody tr:nth-child(even) td,
 table#dataTbl tbody tr:nth-child(even) td,
-table#oMainTable2 tbody tr:nth-child(even) td {
+table#oMainTable2 tbody tr:nth-child(even) td,
+table[id^="DataTables_Table_"] tbody tr:nth-child(even) td {
   background-color: #f8f8f8;
 }
 
 table tbody tr:nth-child(even) td.sorting_1,
 table#dataTbl tbody tr:nth-child(even) td.sorting_1,
-table#oMainTable2 tbody tr:nth-child(even) td.sorting_1 {
+table#oMainTable2 tbody tr:nth-child(even) td.sorting_1,
+table[id^="DataTables_Table_"] tbody tr:nth-child(even) td.sorting_1 {
   background-color: #DBEBE6;
 }
 
@@ -1995,4 +2007,108 @@ table#dataTbl.dataTable tbody tr.child td.child table,
 table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
   background-color: #DBEBE6;
   margin: 0px;
+}
+
+
+/* B209 Title / Subtitle */
+#SysJustIFRAMEDIV .titleText {
+  text-shadow: none;
+  font-family: Microsoft JhengHei;
+  font-size: 24px;
+  height: auto;
+  color: #00726A;
+  padding: 40px 0px 8px 15px !important;
+}
+
+#SysJustIFRAMEDIV .exTitle {
+  padding-left: 15px;
+  color: #000000;
+  font-weight: normal;
+  font-family: Microsoft JhengHei;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  #SysJustIFRAMEDIV .titleText {
+    font-size: 20px;
+    padding-top: 32px !important;
+  }
+}
+
+@media (max-width: 319px) {
+  #SysJustIFRAMEDIV .titleText {
+    font-size: 18px;
+    padding-top: 24px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #SysJustIFRAMEDIV .exTitle {
+    font-size: 15px;
+  }
+}
+
+#SysJustIFRAMEDIV .titleText + table ~ br:nth-of-type(-n+2) {
+  display: none;
+}
+
+/* B210 Table 展開底色 */
+table.just-tb-h td.child-Title, 
+table.just-tb-h-2 td.child-Title, 
+table.just-tb-h-fc td.child-Title {
+  background-color: #DBEBE6;
+  color: #333333;
+}
+
+/* B211 radio */ 
+/* checked */
+.radio-info input[type=radio]:checked+label::before {
+  border-color: #00726A;
+  border-width: 6px;
+}
+
+.radio-info input[type=radio]:checked+label::after {
+  background-color: transparent;
+}
+
+/* not checked */
+.radio label::before {
+  border: 2px solid #00726A;
+}
+
+.radio.radio-inline {
+  margin-top: 8px;
+}
+
+/* B212 投資組合規劃試算*/
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"],
+#SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"] {
+  margin: 0px;
+  font-size: 14px;
+  padding: 11px 10px;
+  width: 130px;
+}
+
+#SysJustIFRAMEDIV input[type="button"][value="按我進行試算"] + input[type="button"][value="重新設定投資組合"] {
+  margin-left: 24px;
+}
+
+@media (max-width: 767px) {
+  #SysJustIFRAMEDIV input[type="button"][value="按我進行試算"],
+  #SysJustIFRAMEDIV input[type="button"][value="重新設定投資組合"] {
+    margin: 0px;
+    font-size: 14px;
+    padding: 11px 10px;
+    width: 100%;
+  }
+
+  #SysJustIFRAMEDIV input[type="button"][value="按我進行試算"] + input[type="button"][value="重新設定投資組合"] {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+
+/* title */ 
+.tLayer1 h4, .tLayer2 h4 {
+  color: #00726A
 }
