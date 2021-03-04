@@ -2243,7 +2243,7 @@ table>thead>tr>th,
 table#dataTbl>thead>tr>th,
 table#oMainTable2 thead tr>th,
 table[id^="DataTables_Table_"]>thead>tr>th,
-table.Tb01BN>tbody>tr:first-child>td {
+table.Tb01BN>tbody>tr[id="oScrollMenu"]:first-child>td {
   background-color: #ffeeb3;
   color: #666;
   font-size: 16px;
