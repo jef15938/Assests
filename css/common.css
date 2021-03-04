@@ -1824,7 +1824,9 @@ form[id="selectFrom"] ::placeholder {
 
 /* pagination */
 #dataTbl_paginate .pagination>li>a,
-#dataTbl_paginate .pagination>li>a:focus {
+#dataTbl_paginate .pagination>li>a:focus,
+[id^="DataTables_Table_"] .pagination>li>a,
+[id^="DataTables_Table_"] .pagination>li>a:focus {
   color: #666;
   border: none;
   background: transparent;
@@ -1832,7 +1834,9 @@ form[id="selectFrom"] ::placeholder {
 }
 
 #dataTbl_paginate .pagination>.active>a,
-#dataTbl_paginate .pagination>.active>a:focus {
+#dataTbl_paginate .pagination>.active>a:focus,
+[id^="DataTables_Table_"] .pagination>.active>a,
+[id^="DataTables_Table_"] .pagination>.active>a:focus {
   font-weight: bolder;
   color: #00726a;
   border-color: transparent;
@@ -1987,12 +1991,14 @@ div.dataTables_wrapper div.dataTables_filter input {
   }
 }
 
-/* B_205 主要債市收盤行情 */
+/* B_205 主要債市收盤行情 & 按鈕 */
 .dj-pills .pills-wrapper {
   margin-bottom: 20px;
 }
 
-.nav-pills>li>a {
+.nav-pills>li>a,
+.ui-tabs .ui-tabs-nav li a {
+  padding: 0px;
   border-radius: 27px;
   border: 1px solid #ddd;
   transition: all .5s ease-in-out;
@@ -2009,21 +2015,38 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .nav-pills>li.active>a,
+.nav-pills>li.active>a:link,
 .nav-pills>li.active>a:hover,
-.nav-pills>li.active>a:focus {
+.nav-pills>li.active>a:focus,
+.ui-tabs-nav>li.ui-state-active a, 
+.ui-tabs-nav>li.ui-state-active a:link,
+.ui-tabs-nav>li.ui-state-active a:hover,
+.ui-tabs-nav>li.ui-state-active a:focus {
   border-color: #008680;
   background-color: #008680;
   color: #fff;
+  cursor: pointer;
+}
+
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus,
+.ui-tabs-nav>li.ui-state-active a:hover,
+.ui-tabs-nav>li.ui-state-active a:focus {
+  opacity: .8;
 }
 
 .nav>li>a:hover,
-.nav>li>a:focus {
+.nav>li>a:focus,
+.ui-tabs-nav>li>a:hover,
+.ui-tabs-nav>li>a:focus,
+.ui-state-default:not(.ui-state-active) a:hover {
   border-color: #008680;
-  background-color: #008680;
+  background-color: #008680 !important;
   color: #fff;
 }
 
-.nav-pills>li+li {
+.nav-pills>li+li,
+.ui-tabs .ui-tabs-nav li+li {
   margin-left: 16px;
 }
 
@@ -2339,11 +2362,11 @@ table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
 }
 
 #SysJustIFRAMEDIV .exTitle {
-  padding-left: 15px;
-  color: #000000;
-  font-weight: normal;
+  color: #333333;
   font-family: Microsoft JhengHei;
+  font-weight: bold;
   font-size: 16px;
+  line-height: 26px;
 }
 
 @media (max-width: 767px) {
@@ -2361,9 +2384,31 @@ table[id^="DataTables_Table_"].dataTable tbody tr.child td.child table {
 }
 
 @media (max-width: 767px) {
-  #SysJustIFRAMEDIV .exTitle {
+  #SysJustIFRAMEDIV .exTitle,
+  #SysJustIFRAMEDIV .titleText + table > tbody tr td,
+  #SysJustIFRAMEDIV .titleText + table > tbody tr td:not(.exTitle) {
     font-size: 15px;
   }
+}
+
+
+#SysJustIFRAMEDIV .titleText + table > tbody tr td {
+  background-color: transparent;
+  color: #333333;
+  font-family: Microsoft JhengHei;
+  padding-bottom: 8px;
+}
+
+#SysJustIFRAMEDIV .titleText + table > tbody tr + tr td {
+  padding-top: 8px;
+}
+
+
+#SysJustIFRAMEDIV .titleText + table > tbody tr td:not(.exTitle) {
+  padding-left: 25px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 #SysJustIFRAMEDIV .titleText + table ~ br:nth-of-type(-n+2) {
