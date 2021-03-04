@@ -2344,15 +2344,30 @@ table.dataTable>tbody>td.group {
   background-color: #DBEBE6;
 }
 
+/* 按 + 展開後裡面的 table */
 table#dataTbl.dataTable>tbody>tr.child>td.child>table,
 table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child>table {
   margin: 0px;
 }
 
+/* 按 + 展開後裡面的 table 容器(td) */
 table#dataTbl.dataTable>tbody>tr.child>td.child,
 table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child {
   background: #DBEBE6;
 }
+
+/* 按 + 展開後裡面的 table (第一個td 為灰色) */
+table#dataTbl.dataTable>tbody>tr.child>td.child>table>tbody>tr>td:first-child,
+table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child>table>tbody>tr>td:first-child {
+  background: #f8f8f8;
+}
+
+/* 按 + 展開後裡面的 table (非第一個 td 為白色) */
+table#dataTbl.dataTable>tbody>tr.child>td.child>table>tbody>tr>td:not(:first-child),
+table[id^="DataTables_Table_"].dataTable>tbody>tr.child>td.child>table>tbody>tr>td:not(:first-child) {
+  background: #fff;
+}
+
 
 
 /* B209 Title / Subtitle */
