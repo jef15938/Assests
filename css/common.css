@@ -1846,18 +1846,8 @@ form[id="selectFrom"] ::placeholder {
 
 /* B_202基金快搜 tab、button */
 /* tab */
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:hover,
-.nav-tabs>li.active>a:focus {
-  border: none;
+.nav-tabs>li.active>a{
   border-bottom: 2px solid #00726a;
-  color: #00726a;
-}
-
-.nav>li>a:hover,
-.nav>li>a:focus {
-  text-decoration: none;
-  background-color: transparent;
   color: #00726a;
 }
 
@@ -2037,12 +2027,16 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .nav>li>a:hover,
 .nav>li>a:focus,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus,
 .ui-tabs-nav>li>a:hover,
 .ui-tabs-nav>li>a:focus,
 .ui-state-default:not(.ui-state-active) a:hover {
   border-color: #008680;
   background-color: #008680 !important;
   color: #fff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-pills>li+li,
