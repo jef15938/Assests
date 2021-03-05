@@ -1879,12 +1879,14 @@ a:focus {
 
 ul.tag {
   margin-bottom: 16px;
+  margin-top: 12px;
 }
 
 ul.tag .btn-group a {
   padding: 9px;
   width: 106px;
   text-decoration: none;
+  bottom: 12px;
 }
 
 @media (max-width: 767px) {
