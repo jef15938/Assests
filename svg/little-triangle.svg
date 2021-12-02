@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle Copy 8</title>
+    <defs>
+        <path d="M-504.020516,5.97956825 L-258.979484,4.97411957 C-256.226092,4.96282189 -254,2.72757688 -254,-0.0258383435 L-254,-50 C-254,-52.7614237 -251.761424,-55 -249,-55 L-5,-55 C-2.23857625,-55 0,-52.7614237 0,-50 L0,-0.0463121784 C0,2.71511157 2.23857625,4.95368782 5,4.95368782 L250,4.95368782 C252.761424,4.95368782 255,7.19226407 255,9.95368782 L255,471 C255,473.761424 252.761424,476 250,476 L-504,476 C-506.761424,476 -509,473.761424 -509,471 L-509,10.9795262 C-509,8.22611094 -506.773908,5.99086593 -504.020516,5.97956825 Z" id="path-1"></path>
+        <filter x="-0.9%" y="-0.9%" width="101.8%" height="102.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.188462409 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-Copy-8">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
